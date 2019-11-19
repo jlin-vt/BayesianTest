@@ -1,3 +1,4 @@
+
 This blog showcases an example of Bayesian A/B testing to assess click-through rate (CTR).
 <!--more-->
 
@@ -37,7 +38,7 @@ It is also flexible for Bayesian A/B testing to reveal the magnitude of signific
 
 pdf      |    cdf
 :-------------------------:|:-------------------------:
-![Example image](/images/pdf.png)|![Example image](/images/cdf.png)
+![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/pdf.png)|![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/cdf.png)
 
 Thus, data scientists would say "ship this new feature"!
 
@@ -46,7 +47,7 @@ The real power of using Bayesian is that one can achieve a robust result by inco
 
 Let's pretend that we know adding new features does no good. To simulate this, we generate two independent samples from Bernoulli distribution (Clicked / Not Clicked) and compute the ratio that A is better than B. We repeat this procedure until we accumulate 500 observations[6] with some replicates. Ideally, the estimates should remain close to 0 (i.e. null effect) at all times: after all, we generate data from the same distribution. In reality, this is what we have (y is the difference of #clicks between A and B):
 
-![Example image](/images/F_path.png)| ![Example image](/images/B_path.png)
+![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/F_path.png)| ![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/B_path.png)
 
 With limited sample size, frequentist estimates are rather variable which can easily get false positive results; Bayesian estimates remain robust and stay in the same state for the priors.
 
