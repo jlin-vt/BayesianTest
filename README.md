@@ -47,7 +47,12 @@ The real power of using Bayesian is that one can achieve a robust result by inco
 
 Let's pretend that we know adding new features does no good. To simulate this, we generate two independent samples from Bernoulli distribution (Clicked / Not Clicked) and compute the ratio that A is better than B. We repeat this procedure until we accumulate 500 observations[6] with some replicates. Ideally, the estimates should remain close to 0 (i.e. null effect) at all times: after all, we generate data from the same distribution. In reality, this is what we have (y is the difference of #clicks between A and B):
 
-![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/F_path.png)| ![](https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/B_path.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/F_path.png" width="50%" height="50%"/></p>
+
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/jlin-vt/BayesianTest/master/B_path.png" width="50%" height="50%"/></p>
+
 
 With limited sample size, frequentist estimates are rather variable which can easily get false positive results; Bayesian estimates remain robust and stay in the same state for the priors.
 
